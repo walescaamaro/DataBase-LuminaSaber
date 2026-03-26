@@ -3,7 +3,7 @@ CREATE TABLE USUARIO (
   nome VARCHAR(40) NOT NULL,
   email VARCHAR(100) NOT NULL,
   senha VARCHAR(20) UNIQUE NOT NULL,
-  grau_escolar VARCHAR(70) NOT NULL,
+  grau_escolar VARCHAR(70),
   data_nasc DATE NOT NULL,
   tipo_usuario VARCHAR(20) NOT NULL);
 
