@@ -20,7 +20,7 @@ insert into conteudo (cod_conteudo, cod_disc, descricao) values
 (57713, 12298, 'Simple Past');
 
 insert into questao (cod_quest, cod_disc, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_correta, dificuldade) values
-(11154, 82211, 'Quanto é 8 + 7?', '13', '14', '15, '16', 'c', 'fácil'),
+(11154, 82211, 'Quanto é 8 + 7?', '13', '14', '15', '16', 'c', 'fácil'),
 (26667, 44457, 'Qual palavra está escrita corretamente?', 'Excessão', 'Exceção', 'Excesssão', 'Exeção', 'b', 'médio'),
 (96514, 90021, 'Qual é o maior país da América do Sul?', 'Argentina', 'Chile', 'Brasil', 'Peru', 'c', 'fácil'),
 (13579, 57713, 'Quem foi o primeiro presidente do Brasil?', 'Getúlio Vargas', 'Deodoro da Fonseca', 'Juscelino Kubitschek', 'Dom Pedro II', 'b', 'médio');
