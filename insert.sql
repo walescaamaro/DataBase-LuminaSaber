@@ -14,10 +14,10 @@ insert into disciplina (cod_disc, nome_disc) values
 (34512, 'Artes');
 
 insert into conteudo (cod_conteudo, cod_disc, descricao) values
-(82211, 54411, 'Operações com Fração'),
-(44457, 11356, 'Regência'),
-(90021, 98334, 'Genética'),
-(57713, 12298, 'Simple Past');
+(54411, 82211, 'Operações com Fração'),
+(11356, 44457, 'Regência'),
+(98334, 90021, 'Genética'),
+(12298, 57713, 'Simple Past');
 
 insert into questao (cod_quest, cod_disc, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_correta, dificuldade) values
 (11154, 82211, 'Quanto é 8 + 7?', '13', '14', '15', '16', 'c', 'fácil'),
