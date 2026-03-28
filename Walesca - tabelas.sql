@@ -13,13 +13,50 @@ CREATE TABLE PASTA (
   data_criacao DATE NOT NULL,
   nome_pasta VARCHAR(100) NOT NULL);
 
-
 CREATE TABLE disciplina (
     cod_disc INTEGER NOT NULL,
     nome_disc VARCHAR(50) NOT NULL, 
     PRIMARY KEY (cod_disc));
 
-CREATE TABLE conteudo (
+ CREATE TABLE suporte (
+    cod_suporte INTEGER PRIMARY KEY,
+    email VARCHAR(100) NOT NULL,
+    tipo_problema VARCHAR(40) NOT NULL,
+    descricao TEXT NOT NULL
+    );
+
+CREATE TABLE relatorio (
+    cod_relatorio INTEGER PRIMARY KEY,
+    meta INTEGER NOT NULL,
+    total_acertos INTEGER NOT NULL,
+    percentual_acertos INTEGER NOT NULL,
+    pontos_fortes VARCHAR(100) NOT NULL,
+    areas_melhorias VARCHAR(100) NOT NULL
+    );
+ 
+ CREATE TABLE questao (
+	cod_quest INTEGER PRIMARY KEY,
+    cod_disc INTEGER NOT NULL,
+    enunciado VARCHAR(700) NOT NULL,
+    alternativa_A VARCHAR(100) NOT NULL,
+    alternativa_B VARCHAR(100) NOT NULL,
+    alternativa_C VARCHAR(100) NOT NULL,
+    alternativa_D VARCHAR(100) NOT NULL,
+    alternativa_correta CHAR(1) NOT NULL,
+    dificuldade VARCHAR(20) NOT NULL,
+    FOREIGN KEY (cod_disc) REFERENCES disciplina(cod_disc));
+ 
+  CREATE TABLE historico (
+    cod_resposta INTEGER PRIMARY KEY,
+    cod_usuario INTEGER NOT NULL,
+    cod_quest INTEGER NOT NULL,
+    data_resposta DATE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (cod_usuario) REFERENCES usuario(cod_usuario),
+    FOREIGN KEY (cod_quest) REFERENCES questao(cod_quest)
+    );
+  
+  CREATE TABLE conteudo (
     cod_conteudo INTEGER NOT NULL,
     cod_disc INTEGER NOT NULL,
     descricao VARCHAR(70) NOT NULL,
@@ -42,29 +79,6 @@ CREATE TABLE contem (
     FOREIGN KEY (cod_pasta) REFERENCES pasta(cod_pasta),
     FOREIGN KEY (cod_resposta) REFERENCES historico(cod_resposta));
     
-    
-CREATE TABLE questao (
-	cod_quest INTEGER PRIMARY KEY,
-    cod_disc INTEGER NOT NULL,
-    enunciado VARCHAR(700) NOT NULL,
-    alternativa_A VARCHAR(100) NOT NULL,
-    alternativa_B VARCHAR(100) NOT NULL,
-    alternativa_C VARCHAR(100) NOT NULL,
-    alternativa_D VARCHAR(100) NOT NULL,
-    alternativa_correta CHAR(1) NOT NULL,
-    dificuldade VARCHAR(20) NOT NULL,
-    FOREIGN KEY (cod_disc) REFERENCES disciplina(cod_disc));
-    
-CREATE TABLE historico (
-    cod_resposta INTEGER PRIMARY KEY,
-    cod_usuario INTEGER NOT NULL,
-    cod_quest INTEGER NOT NULL,
-    data_resposta DATE NOT NULL,
-    status VARCHAR(20) NOT NULL,
-    FOREIGN KEY (cod_usuario) REFERENCES usuario(cod_usuario),
-    FOREIGN KEY (cod_quest) REFERENCES questao(cod_quest)
-    );
-    
 CREATE TABLE anotacao (
     cod_anota INTEGER PRIMARY KEY,
     cod_pasta INTEGER NOT NULL,
@@ -76,22 +90,6 @@ CREATE TABLE anotacao (
     FOREIGN KEY (cod_usuario) REFERENCES usuario(cod_usuario)
     );
 
- CREATE TABLE suporte (
-    cod_suporte INTEGER PRIMARY KEY,
-    email VARCHAR(100) NOT NULL,
-    tipo_problema VARCHAR(40) NOT NULL,
-    descricao TEXT NOT NULL
-    );
-
-CREATE TABLE relatorio (
-    cod_relatorio INTEGER PRIMARY KEY,
-    meta INTEGER NOT NULL,
-    total_acertos INTEGER NOT NULL,
-    percentual_acertos INTEGER NOT NULL,
-    pontos_fortes VARCHAR(100) NOT NULL,
-    areas_melhorias VARCHAR(100) NOT NULL
-    );
-    
 CREATE TABLE possui (
     cod_quest INTEGER,
     cod_resposta INTEGER,
