@@ -114,3 +114,16 @@ INSERT INTO anotacao (cod_anota, cod_pasta, cod_usuario, titulo, texto_anota, da
 (1008, 99821, 65928, 'Brasil Colônia', 'Resumo sobre capitanias hereditárias.', '2025-09-18'),
 (1009, 44567, 84721, 'Tabuada avançada', 'Praticar multiplicação e divisão.', '2024-07-02'),
 (1010, 73210, 59384, 'Relevo brasileiro', 'Principais planaltos e planícies do Brasil.', '2025-01-22');
+
+
+INSERT INTO estuda (cod_usuario, cod_disc, meta, tempo) VALUES
+(76554, 82211, 20, '01:30:00'),
+(43221, 44457, 15, '01:00:00'),
+(99530, 90021, 25, '02:00:00'),
+(10267, 57713, 18, '01:20:00'),
+(84721, 76326, 12, '00:50:00'),
+(59384, 98743, 10, '00:45:00'),
+(21097, 34512, 14, '01:10:00'),
+(77652, 82211, 22, '01:40:00'),
+(43890, 44457, 16, '01:15:00'),
+(65928, 90021, 19, '01:25:00');
