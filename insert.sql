@@ -102,3 +102,15 @@ insert into possui (cod_quest, cod_resposta) values
 (55813, 643),
 (66924, 754),
 (77035, 865);
+
+INSERT INTO anotacao (cod_anota, cod_pasta, cod_usuario, titulo, texto_anota, data_anota) VALUES
+(1001, 33441, 76554, 'Resumo de matemática', 'Anotei os principais conceitos de frações e porcentagem.', '2024-01-10'),
+(1002, 11667, 43221, 'Equações básicas', 'Resolver exercícios de primeiro grau para a prova.', '2025-05-20'),
+(1003, 39001, 76554, 'Leis de Mendel', 'Primeira lei: segregação dos fatores hereditários.', '2026-02-15'),
+(1004, 12785, 43221, 'Vocabulary', 'Estudar verbos irregulares em inglês.', '2023-05-20'),
+(1005, 55234, 84721, 'Análise sintática', 'Separar sujeito, verbo e predicado nas frases.', '2024-03-18'),
+(1006, 78129, 59384, 'Sistema solar', 'Resumo sobre planetas rochosos e gasosos.', '2025-07-25'),
+(1007, 66478, 77652, 'Simple Present', 'Usar do e does em frases negativas.', '2024-11-09'),
+(1008, 99821, 65928, 'Brasil Colônia', 'Resumo sobre capitanias hereditárias.', '2025-09-18'),
+(1009, 44567, 84721, 'Tabuada avançada', 'Praticar multiplicação e divisão.', '2024-07-02'),
+(1010, 73210, 59384, 'Relevo brasileiro', 'Principais planaltos e planícies do Brasil.', '2025-01-22');
