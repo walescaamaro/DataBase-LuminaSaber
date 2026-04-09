@@ -40,7 +40,7 @@ INNER JOIN questao q
 INNER JOIN disciplina d 
     ON q.cod_disc = d.cod_disc;
 
--- Consulta com múltplas condições
+-- Consulta com múltiplas condições
 SELECT u.nome, d.nome_disc, h.status
 FROM historico h
 INNER JOIN usuario u 
