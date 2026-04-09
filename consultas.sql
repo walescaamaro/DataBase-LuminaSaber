@@ -14,6 +14,9 @@ where meta > 10;
 select cod_usuario, nome from usuario
 where nome like 'A%';
 
+select meta, percentual_acertos from relatorio
+where meta > 10 and percentual_acertos > 60;
+
 -- Ordenação dos dados 
 select cod_usuario, nome from usuario
 order by nome;
