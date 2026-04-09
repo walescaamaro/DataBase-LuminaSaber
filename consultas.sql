@@ -41,7 +41,11 @@ INNER JOIN disciplina d
     ON q.cod_disc = d.cod_disc;
 
 -- Consulta com múltiplas condições
-SELECT u.nome, d.nome_disc, h.status
+SELECT 
+    u.nome,
+    q.enunciado,
+    d.nome_disc,
+    h.data_resposta
 FROM historico h
 INNER JOIN usuario u 
     ON h.cod_usuario = u.cod_usuario
@@ -51,6 +55,8 @@ INNER JOIN disciplina d
     ON q.cod_disc = d.cod_disc
 WHERE 
     h.status = 'Acertou'
-    AND d.nome_disc = 'Matemática';
+    AND q.dificuldade = 'fácil'
+    AND d.nome_disc = 'Matemática'
+    AND h.data_resposta >= '2025-01-01';
 
 
