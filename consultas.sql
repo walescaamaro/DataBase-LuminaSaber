@@ -18,4 +18,5 @@ where nome like 'A%';
 select cod_usuario, nome from usuario
 order by nome;
 
-
+select cod_usuario, nome from usuario
+order by nome DESC;
