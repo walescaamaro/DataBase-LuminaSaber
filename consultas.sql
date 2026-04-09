@@ -21,4 +21,10 @@ order by nome;
 select cod_usuario, nome from usuario
 order by nome DESC;
 
--- 
+-- Consultas com JOIN
+SELECT u.nome, an.cod_pasta
+FROM usuario u
+INNER JOIN anotacao an 
+    ON u.cod_usuario = an.cod_usuario
+
+
