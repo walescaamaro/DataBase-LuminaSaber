@@ -30,5 +30,3 @@ SET tipo_problema = 'URGENTE - TÉCNICO'
 WHERE (tipo_problema = 'Erros' OR tipo_problema = 'Denúncias')
 
 
-
-
