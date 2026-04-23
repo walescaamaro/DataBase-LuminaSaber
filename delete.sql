@@ -14,8 +14,9 @@ DELETE FROM relatorio WHERE percentual_acertos < 50;
 banco de dados focado em relatórios que reflitam o progresso real e a eficácia do aprendizado */
 DELETE FROM relatorio WHERE meta > 10 AND percentual_acertos <= 50;
 
-/*
+/*Manutenção básica do painel administrativo. A categoria "Outros" muitas vezes são testes ou mensagens irrelevantes que o suporte precisa limpar para manter o foco no que é importante.*/
 
+DELETE FROM suporte WHERE tipo_problema = 'Outros'
 
 
 
