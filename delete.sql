@@ -10,3 +10,12 @@ DELETE FROM relatorio WHERE percentual_acertos < 50;
 
 -- Exclusões que façam sentido no sistema:
 
+/*O objetivo é remover registros de sessões de estudo que não foram produtivas, como casos em que o aluno estabeleceu uma meta alta, mas não teve um bom desempenho, mantendo o 
+banco de dados focado em relatórios que reflitam o progresso real e a eficácia do aprendizado */
+DELETE FROM relatorio WHERE meta > 10 AND percentual_acertos <= 50;
+
+/*
+
+
+
+
