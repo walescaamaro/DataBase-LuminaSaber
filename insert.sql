@@ -1,4 +1,4 @@
-insert into usuario (cod_usuario, nome, email, senha, grau_escolar, data_nasc, tipo_usuario) values 
+insert into usuario (cod_usuario, nome, email, senha, grau_escolar, data_nasc, tipo) values 
 (76554, 'Ana Ferreira', 'anaferreira@gmail.com', 'hylu', '2° ano', '2019-08-09', 'aluno'),
 (43221, 'Pedro Torres', 'pedrotorres@gmail.com', 'ophj', '1° ano', '2013-07-10', 'aluno'),
 (99530, 'Walesca Amaro', 'walesca@gmail.com', 'maqb', NULL, '2009-06-07', 'administrador'),
