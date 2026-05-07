@@ -1,4 +1,3 @@
--- 1. Criar um ENUM para o tipo de usuário
 CREATE TYPE tipo_usuario AS ENUM ('administrador', 'aluno');
 
 -- 2. Criar a tabela de usuários
@@ -9,17 +8,16 @@ CREATE TABLE USUARIO (
 	senha VARCHAR(20) UNIQUE NOT NULL,
 	grau_escolar VARCHAR(70),
 	data_nasc DATE NOT NULL,
-	tipo tipo_usuario NOT NULL,
-);
+	tipo tipo_usuario NOT NULL);
 
 -- 3. Adicionar restrição (CHECK CONSTRAINT)
 -- A lógica: Se o usuário for aluno, grau_escolar NÃO pode ser nulo.
 -- Se for admin, a coluna grau_escolar pode ser nula.
-ALTER TABLE usuarios
+ALTER TABLE USUARIO
 ADD CONSTRAINT check_grau_escolar_aluno
 CHECK (
     (tipo = 'aluno' AND grau_escolar IS NOT NULL) OR 
-    (tipo = 'admin')
+    (tipo = 'administrador')
 );
 
 CREATE TABLE PASTA (
