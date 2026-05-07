@@ -1,5 +1,5 @@
 -- 1. Criar um ENUM para o tipo de usuário
-CREATE TYPE tipo_usuario AS ENUM ('admin', 'aluno');
+CREATE TYPE tipo_usuario AS ENUM ('administrador', 'aluno');
 
 -- 2. Criar a tabela de usuários
 CREATE TABLE USUARIO (
