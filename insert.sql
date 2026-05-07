@@ -1,13 +1,13 @@
 insert into usuario (cod_usuario, nome, email, senha, grau_escolar, data_nasc, tipo_usuario) values 
 (76554, 'Ana Ferreira', 'anaferreira@gmail.com', 'hylu', '2° ano', '2019-08-09', 'aluno'),
-(43221, 'Pedro Torres', 'pedrotorres@gmail.com', 'ophj', '8° ano', '2013-07-10', 'aluno'),
-(99530, 'Walesca Amaro', 'walesca@gmail.com', 'maqb', '9° ano', '2009-06-07', 'administrador'),
-(10267, 'Rayssa Priscila', 'rayssa@gmail.com', 'iikjr', '9° ano', '2009-03-29', 'administrador'),
+(43221, 'Pedro Torres', 'pedrotorres@gmail.com', 'ophj', '1° ano', '2013-07-10', 'aluno'),
+(99530, 'Walesca Amaro', 'walesca@gmail.com', 'maqb', NULL, '2009-06-07', 'administrador'),
+(10267, 'Rayssa Priscila', 'rayssa@gmail.com', 'iikjr', NULL, '2009-03-29', 'administrador'),
 (84721, 'Lucas Andrade', 'lucas@gmail.com', 'abc1', '7° ano', '2012-04-15', 'aluno'),
 (59384, 'Marina Souza', 'marina@gmail.com', 'def2', '6° ano', '2013-09-22', 'aluno'),
-(21097, 'Carlos Henrique', 'carlos@gmail.com', 'ghi3', '9° ano', '2009-11-30', 'administrador'),
-(77652, 'Juliana Lima', 'juliana@gmail.com', 'jkl4', '8° ano', '2011-01-08', 'aluno'),
-(43890, 'Bruno Martins', 'bruno@gmail.com', 'mno5', '9° ano', '2018-06-19', 'administrador'),
+(21097, 'Carlos Henrique', 'carlos@gmail.com', 'ghi3', '4° ano', '2009-11-30', 'aluno'),
+(77652, 'Juliana Lima', 'juliana@gmail.com', 'jkl4', '3° ano', '2011-01-08', 'aluno'),
+(43890, 'Bruno Martins', 'bruno@gmail.com', 'mno5', '9° ano', '2018-06-19', 'aluno'),
 (65928, 'Fernanda Alves', 'fernanda@gmail.com', 'fna1', '8° ano', '2011-07-25', 'aluno');
 
 insert into disciplina (cod_disc, nome_disc) values
