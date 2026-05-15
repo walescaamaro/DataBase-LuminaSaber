@@ -27,6 +27,6 @@ WHERE cod_usuario = 84721 AND cod_disc = 76326;
 
 UPDATE suporte
 SET tipo_problema = 'URGENTE - TÉCNICO'
-WHERE (tipo_problema = 'Erros' OR tipo_problema = 'Denúncias')
+WHERE (tipo_problema = 'Erros' OR tipo_problema = 'Denúncias');
 
 
