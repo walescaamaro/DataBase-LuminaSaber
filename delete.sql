@@ -16,7 +16,7 @@ DELETE FROM relatorio WHERE meta > 10 AND percentual_acertos <= 50;
 
 /*A categoria "Outros" muitas vezes são testes ou mensagens irrelevantes que o suporte precisa limpar para manter o foco no que é importante.*/
 
-DELETE FROM suporte WHERE tipo_problema = 'Outros'
+DELETE FROM suporte WHERE tipo_problema = 'Outros';
 
 
 
