@@ -2,7 +2,7 @@
 
 # 🗄️ DataBase — LuminaSaber
 
-**Scripts PostgreSQL do banco de dados da plataforma [LuminaSaber](https://github.com/walescaamaro/LuminaSaber)**
+**Scripts SQLite do banco de dados da plataforma [LuminaSaber](https://github.com/walescaamaro/LuminaSaber)**
 
 </div>
 
@@ -10,7 +10,14 @@
 
 ## 📖 Sobre este repositório
 
-Este repositório contém todos os scripts SQL do banco de dados relacional do projeto LuminaSaber, desenvolvido em **PostgreSQL**. Os arquivos estão organizados por operação para facilitar a leitura e execução.
+Este repositório contém todos os scripts SQL do banco de dados relacional do projeto LuminaSaber, desenvolvido em **SQLite**. Os arquivos estão organizados por operação para facilitar a leitura e execução.
+
+> ⚠️ **Atenção:** o banco foi originalmente modelado em **PostgreSQL** e migrado para **SQLite**. As principais adaptações foram:
+> - `ENUM` substituído por `TEXT` com `CHECK`
+> - `ALTER TABLE ADD CONSTRAINT` movido para dentro do `CREATE TABLE`
+> - Tipo `TIME` substituído por `TEXT` (formato `'HH:MM:SS'`)
+> - `AUTOINCREMENT` adicionado em todas as chaves primárias simples
+> - `PRAGMA foreign_keys = ON;` necessário para ativar chaves estrangeiras
 
 ---
 
@@ -29,7 +36,7 @@ Este repositório contém todos os scripts SQL do banco de dados relacional do p
 
 | Arquivo | O que faz |
 |---------|-----------|
-| `tabelas.sql` | Cria todas as tabelas, tipos e relacionamentos do banco |
+| `tabelas.sql` | Cria todas as tabelas, constraints e relacionamentos do banco em SQLite |
 | `insert.sql` | Insere os dados iniciais em todas as tabelas |
 | `consultas.sql` | Consultas de exemplo com SELECT, WHERE, JOIN e ordenação |
 | `atualização de dados (update).sql` | Exemplos de atualização de registros com UPDATE |
@@ -37,11 +44,27 @@ Este repositório contém todos os scripts SQL do banco de dados relacional do p
 
 ---
 
-## 🧩 Tabelas do Banco
+## Tabelas do Banco
 
-O modelo é composto por 12 tabelas:
+O modelo é composto por **12 tabelas**:
 
 `USUARIO` · `DISCIPLINA` · `CONTEUDO` · `QUESTAO` · `HISTORICO` · `PASTA` · `ANOTACAO` · `SUPORTE` · `RELATORIO` · `ESTUDA` · `POSSUI` · `CONTEM`
+
+### Tabelas com `AUTOINCREMENT`
+
+| Tabela | Coluna |
+|--------|--------|
+| `USUARIO` | `cod_usuario` |
+| `PASTA` | `cod_pasta` |
+| `DISCIPLINA` | `cod_disc` |
+| `SUPORTE` | `cod_suporte` |
+| `RELATORIO` | `cod_relatorio` |
+| `QUESTAO` | `cod_quest` |
+| `HISTORICO` | `cod_resposta` |
+| `CONTEUDO` | `cod_conteudo` |
+| `ANOTACAO` | `cod_anota` |
+
+> Tabelas com chave primária composta (`ESTUDA`, `CONTEM`, `POSSUI`) não utilizam `AUTOINCREMENT`.
 
 ---
 
