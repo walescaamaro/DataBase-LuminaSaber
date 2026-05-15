@@ -6,7 +6,7 @@ select * from usuario;
 
 -- Consultas com WHERE
 select enunciado, dificuldade from questao
-where dificuldade = 'fácil'
+where dificuldade = 'fácil';
 
 select meta from relatorio
 where meta > 10;
@@ -28,7 +28,7 @@ order by nome DESC;
 SELECT u.nome, an.cod_pasta
 FROM usuario u
 INNER JOIN anotacao an 
-    ON u.cod_usuario = an.cod_usuario
+    ON u.cod_usuario = an.cod_usuario;
 
 SELECT 
     u.nome,
